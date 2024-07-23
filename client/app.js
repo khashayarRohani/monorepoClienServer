@@ -9,13 +9,16 @@ form.addEventListener("submit", async function (event) {
 
   //   console.log(formValues);
   // make an API call when we submit the form
-  const response = await fetch("http://localhost:8181/joke", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formValues),
-  });
+  const response = await fetch(
+    "https://monorepoclienserver.onrender.com/joke",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    }
+  );
   const data = await response.json();
   console.log(data);
 });
