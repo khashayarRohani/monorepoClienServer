@@ -15,7 +15,7 @@ app.post("/joke", function (request, response) {
   console.log(request.body);
 
   response.json(request.body);
-  response.json({ message: "Thank you for making a new entry" });
+  // response.json({ message: "Thank you for making a new entry" });
 });
 
 app.listen(8181, function (req, res) {
